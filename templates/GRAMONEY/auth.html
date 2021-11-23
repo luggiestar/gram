@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Frank Invest</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" href="img/invest.png" type="image/icon type">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/animate.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- vue js -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+	<script src="https://unpkg.com/vue-ui-preloader"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-ui-preloader/dist/loader.css">
+</head>
+<body class="bg-light">
+<div id="app2">
+	 <loader object="#ff9633" color1="#ffffff" color2="#17fd3d" size="5" speed="2" bg="#343a40" objectbg="#999793" opacity="80" name="circular"></loader>
+
+	<section class="nav-top">
+		<div class="bg-white container-fluid">
+			<div class="d-flex justify-content-between p-3">
+				<div>
+					<h4><img src="img/invest.png" class="control-img-logo"></h4>
+				</div>
+				<div style="margin-top: -1.4rem;">
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- get started -->
+	<section class="mt-5">
+		<div class="container-fluid">
+			<p class="text-center display-4">GET STARTED</p>
+			<div class="row justify-content-center">
+				<div class="col-md-10 col-xl-10 col-xs-12 col-sm-12">
+					<form class="form">
+						<div class="row">
+							<div class="mt-3 col-md-6 col-xl-6 col-xs-12 col-sm-12">
+								<input type="text" name="name" class="form-control" placeholder="First Name" style="background: transparent">
+							</div>
+							<div class="mt-3 col-md-6 col-xl-6 col-xs-12 col-sm-12">
+								<input type="text" name="name" class="form-control" placeholder="Last Name" style="background: transparent">
+							</div>
+							<div class="mt-3 col-md-6 col-xl-6 col-xs-12 col-sm-12">
+								<input type="text" name="name" class="form-control" placeholder="Post Address" style="background: transparent">
+							</div>
+							<div class="mt-3 col-md-6 col-xl-6 col-xs-12 col-sm-12">
+								<input type="text" name="name" class="form-control" placeholder="example@example.com" style="background: transparent">
+							</div>
+							<div class="mt-3 col-md-6 col-xl-6 col-xs-12 col-sm-12">
+								<input type="number" name="name" class="form-control" placeholder="phone Number" style="background: transparent">
+							</div>
+							<div class="mt-3 col-md-6 col-xl-6 col-xs-12 col-sm-12">
+								<input type="text" name="name" class="form-control" placeholder="Country" style="background: transparent">
+							</div>
+							<div class="mt-3 col-md-6 col-xl-6 col-xs-12 col-sm-12">
+								<input type="text" name="name" class="form-control" placeholder="Region" style="background: transparent">
+							</div>
+							<div class="mt-3 col-md-6 col-xl-6 col-xs-12 col-sm-12">
+								<input type="text" name="name" class="form-control" placeholder="District" style="background: transparent">
+							</div>
+							<div class="mt-3 col-md-6 col-xl-6 col-xs-12 col-sm-12">
+								<select class="form-control" style="background: transparent">
+									
+									<option value="male">Male</option>
+									<option value="female">Female</option>
+								</select>
+							</div>
+							<div class="mt-3 col-md-6 col-xl-6 col-xs-12 col-sm-12">
+								<input type="text" name="name" class="form-control" placeholder="Age" style="background: transparent">
+							</div>
+						</div>
+						<center>
+							<div class="mt-3">
+								<button class="btn btn-outline-danger col-xl-4 col-sm-12"><b>Save Detail</b></button>
+							</div>
+						</center>
+					</form>	
+				</div>
+			</div>
+		</div>
+	</section>
+<script type="text/javascript">
+	var app = new Vue({
+		el: '#investCalu',
+		data: {
+		   amount: '',
+		   days: '',
+		   total : 0
+		},
+
+		methods: {
+			calc () {
+				var new_total = 2;
+
+				var get_day = parseInt(this.days);
+				var get_amount = parseInt(this.amount);
+
+				if(get_day == 4) {
+					interest_amount = get_amount * 0.3;
+					new_total = interest_amount + get_amount;
+					this.total = new_total 
+				}
+
+				else if(get_day == 8) {
+					interest_amount = get_amount * 0.6;
+					new_total = interest_amount + get_amount;
+					this.total = new_total 
+				}
+				else {
+					total = 0
+				}				
+			}
+		}
+
+	})
+
+</script>
+
+<script>
+	Vue.use(loader)
+		new Vue({
+		el: '#app',
+	  	components:{
+	  		loader:loader
+		}
+	});
+</script>
+
+	<style type="text/css">
+		.form-balance {
+			width: 10rem;
+			height: 1.8rem;
+		}
+		.card-image {
+			width: 40%;	
+			margin: auto;
+		}
+		.bg-black {
+			background-color:black;
+		}
+		.bg-dark-blue {
+			background-color:#22293d;
+		}
+		.control-img {
+			width: 60%;
+		}
+
+		.control-img-logo {
+			width: 30%;
+		}
+		.round-img {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+		}
+
+		.testmoney-img{
+			margin-top: -4rem;
+		}
+
+		.card-hover{
+			transition: all ease 1s;
+		}
+
+		.card-hover:hover, .round-img:hover{
+			cursor: pointer;
+			border: 1px solid #22293d;
+		}
+		.form-control{
+			padding: 1.5rem;
+			border-top-style: none;
+			border-left-style: none;
+			border-right-style: none;
+		}
+
+		.form-control: focus{
+			background: transparent;
+		}
+
+	</style>
+
+	<script src="js/wow.min.js"></script>
+	<script type="text/javascript">
+		new WOW().init()
+	</script>
+</body>
+</html>

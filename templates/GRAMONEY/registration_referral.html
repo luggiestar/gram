@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+{% load static %}
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MSS-SRS</title>
+   <!-- Custom fonts for this template-->
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+     <link rel="apple-touch-icon" href="{% static 'img/MKUU.png'%}">
+    <link rel="icon" href="{% static 'img/MKUU.png'%}">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'css/mu.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" >
+    <style>
+    .mu-bg{
+        background-color: #151d47;
+    }
+    @media (max-width: 423px) and (max-width: 423px){
+        img {
+            width: 5rem;
+        }
+        .login {
+            display: none;
+        }
+        .cnter-sm{
+            text-align: center;
+        }
+    }
+</style>
+</head>
+<body id="page-top" >
+
+    <div class="container pt-2 mt-2">
+        <div class="row justify-content-center">
+
+          <div class="col-xl-5 col-md-5 wow fadeIn">
+                <div class="">
+                    <div class="card">
+                        <div class="card-header">
+                            <center><img src="{% static 'img/invest.png' %}" class="card-im wow fadeIn" width="90px" height="80px" data-wow-delay="1s"></center>
+                            <h6 class="text-center pt-2 text-muted"><b>Registration Form</b></h6>
+
+                        </div>
+                        <div class="card-body">
+
+
+	<form  method="post" >
+								      		{% csrf_token %}
+						      				{% include 'includes/form.html'%}
+						      				<div class="form-group">
+						      					<button type="submit"  class="btn mu-bg mu-color btn-block"> <b>Signup</b></button>
+						      				</div>
+								      	</form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<script>
+    window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 2000);
+</script>
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- others plugins -->
+    <script src="{% static 'js/wow.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'js/mu.js' %}"></script>
+
+    <script> 
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>

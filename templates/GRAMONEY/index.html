@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<title>Gramoney Invest</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" href="{% static 'img/invest.png' %}" type="image/icon type">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" >
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- vue js -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body class="bg-light">
+<div id="app2">
+	 <loader object="#ff9633" color1="#ffffff" color2="#17fd3d" size="5" speed="2" bg="#343a40" objectbg="#999793" opacity="80" name="circular"></loader>
+
+	<section class="nav-top">
+		<div class="bg-white container-fluid">
+			<div class="d-flex justify-content-between p-3">
+				<div>
+					<h4><img src="{% static 'img/invest.png' %}" class="control-img-logo"></h4>
+				</div>
+				<div style="margin-top: -1.4rem;">
+					<a href="{% url 'GRAMONEY:login' %}" class="btn btn-danger text-uppercase mt-3 wow bounceIn" data-wow-delay="1s">
+						<b>Login</b>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- header start -->
+		<header class="bg-dark-blue p-5">
+			<div class="row">
+				<div class="col-md-5 col-xl-5 col-sm-12 col-xs-12 wow fadeIn">
+					<h1 class="text-white text-align">At any time any where, Invest with Us and Let's earn together.
+					</h1>
+					<p class="text-white pt-3 wow fadeIn" data-wow-delay="0.6s">Affordable Investment Plan are available<br> Invest and Make money on yor extra time <br>
+					</p>
+					<a href="{% url 'GRAMONEY:registration' %}" class="btn btn-danger text-uppercase mt-3 wow bounceIn" data-wow-delay="1s">
+						<b>Get Started Right now</b>
+					</a>	
+				</div>
+
+				<div class="col-md-5 col-sm-12 col-xs-12">
+					<img src="{% static 'img/invest2.png' %}" class="control-img">
+				</div>
+			</div>
+		</header>
+
+		<!-- header footer -->
+		<div class="bg-black p-5">
+			<div class="row justify-content-center">
+				<div class="col-md-4 col-xl-4 col-sm-12 col-xs-12 wow fadeInDown" data-wow-delay="0.3s">
+					<i class="fa fa-check-circle text-danger text-center"></i>
+					<br>
+					<h5 class="pt-3 text-white">Tsh.10000+ minimum investment</h5>
+					<p class="text-muted">No fees when you make a deposit</p>
+				</div>
+				<div class="col-md-4 col-xl-4 col-sm-12 col-xs-12 wow fadeInDown" data-wow-delay="0.5s">
+					<i class="fa fa-check-circle text-danger text-center"></i>
+					<br>
+					<h5 class="pt-3 text-white">Tsh.13000/= minimum withdraw</h3>
+					<p class="text-muted">Instant withdraw</p>
+				</div>
+				<div class="col-md-4 col-xl-4 col-sm-12 col-xs-12 wow fadeInDown" data-wow-delay="0.7s">
+					<i class="fa fa-check-circle text-danger text-center"></i>
+					<br>
+					<h5 class="pt-3 text-white">Tracking</h3>
+					<p class="text-muted">Invest today and keep eyes on your earning</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- available assets -->
+	<section class="mt-5">
+		<h5 class="text-dark text-center">600+ investment available</h5>
+		<h2 class="text-center pt-4 display-4"><b>Available Investment planning</b></h2>
+		<div class="container pt-4 pb-4">
+			<div class="row justify-content-center">
+				<div class="col-md-4 col-xl-4 col-xs-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+					<div class="card shadow">
+						<div class="card-body">
+							<center>
+								<img src="{% static 'img/invest.png' %}" class="card-image"></center>
+							<p class="text-center">
+								<i class="fa fa-money fa-3x"></i>
+							</p>
+							<h4 class="text-center text-muted">SHORT: 4 days</h4>
+							<ul class="list-unstyled ml-4">
+								<li>
+									<i class="fa fa-check text-danger"></i>
+									Tsh. 10000/= minimum Balance
+								</li>
+								<li class="mt-2">
+									<i class="fa fa-check text-danger"></i>
+									30% of investment as profit
+								</li>
+								<li class="mt-2">
+									<i class="fa fa-check text-danger"></i>
+									5%  of investment as invitation Earning
+								</li>
+
+							</ul>
+							<center><a href="{% url 'GRAMONEY:registration' %}" class="btn btn-danger text-uppercase mt-3">
+								<b>Get Started</b>
+							</a></center>
+							<center><button type="button" class="btn bg-dark-blue text-light mt-3" data-toggle="modal" data-target="#investCalu">
+		  						Investment calculator
+							</button></center>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-xl-4 col-xs-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+					<div class="card shadow">
+						<div class="card-body">
+							<center><img src="{% static 'img/invest.png' %}" class="card-image" ></center>
+							<p class="text-center">
+								<i class="fa fa-money fa-3x"></i>
+							</p>
+							<h4 class="text-center text-muted">Long: 8 days</h4>
+							<ul class="list-unstyled ml-4">
+								<li>
+									<i class="fa fa-check text-danger"></i>
+									Tsh. 10000/= minimum Balance
+								</li>
+								<li class="mt-2">
+									<i class="fa fa-check text-danger"></i>
+									60% of investment as profit
+								</li>
+								<li class="mt-2">
+									<i class="fa fa-check text-danger"></i>
+									10%  of investment as invitation Earning Profit
+								</li>
+
+							</ul>
+							<center><a href="{% url 'GRAMONEY:registration' %}" class="btn btn-danger text-uppercase mt-3">
+								<b>Get Started</b>
+							</a></center>
+							<center><button type="button" class="btn bg-dark-blue text-light mt-3" data-toggle="modal" data-target="#investCalu">
+		  						Investment calculator
+							</button></center>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- why us -->
+
+	<section class="mt-5 bg-white mb-4 wow fadeIn" data-wow-delay="0.5s" data-wow-duration="3s">
+		<div class="container p-5">
+			<h2 class="text-center display-4">Why invest with GRAMONEY?</h2>
+			<section class="mt-4">
+				<div class="row">
+					<div class="col-md-4 col-xl-4 col-xs-12 col-sm-12">
+						<i class="fa fa-user-circle fa-lg fa-3x mb-3 text-danger"></i>
+						<h5><b>Quick Support</b></h5>
+						<p>Our Team is always there for helping you when you stack any where. Feel free to contact us any time because we are there 24HRS</p>
+					</div>
+					<div class="col-md-4 col-xl-4 col-xs-12 col-sm-12">
+						<i class="fa fa-handshake-o fa-lg fa-3x mb-3 text-danger"></i>
+						<h5><b>Awards</b></h5>
+						<p>For those who investing frequently we award them each month invest more to get more interest from us</p>
+					</div>
+					<div class="col-md-4 col-xl-4 col-xs-12 col-sm-12">
+						<i class="fa fa-envelope-o fa-lg fa-3x mb-3 text-danger"></i>
+						<h5><b>Convenient withdrawals</b></h5>
+						<p>Withdraw your money  instantly using a wide range of available payment gateway. Different gateway are offered example m-pesa, togo-pesa</p>
+					</div>
+				</div>
+			</section>
+			<div class="d-flex flex-row justify-content-center">
+				<a href="{% url 'GRAMONEY:registration' %}" class="btn btn-danger text-uppercase mt-3 wow bounceIn" data-wow-delay="0.8s">
+					<b>Get Started Right now</b>
+				</a>	
+			</div>
+		</div>
+	</section>
+
+	<!-- summary -->
+	<section>
+		<div class="bg-dark-blue p-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-xl-4 col-sm-12 col-xs-12">
+						<i class="fa fa-signal text-muted fa-2x mb-3"></i>
+						<h5 class="text-light">Tsh.5,000,000+/=</h5>
+						<h6 class="text-muted mt-3">Monthly investing volume</h6>
+					</div>
+					<div class="col-md-4 col-xl-4 col-sm-12 col-xs-12">
+						<i class="fa fa-user-circle text-muted fa-2x mb-3"></i>
+						<h5 class="text-light">480+</h5>
+						<h6 class="text-muted mt-3">Registered user</h6>
+					</div>
+					<div class="col-md-4 col-xl-4 col-sm-12 col-xs-12">
+						<i class="fa fa-line-chart text-muted fa-2x mb-3"></i>
+						<h5 class="text-light">Tsh.2,675,540+</h5>
+						<h6 class="text-muted mt-3">Withdrawn each month</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="mb-3 pt-4">
+		<div class="container-fluid">
+			<p class="display-4 pb-5 text-center">Testimonies</p>
+			<div class="row">
+				<div class="col-md-3 col-xl-3 col-sm-12 col-xs-12">
+					<div class="card card-hover">
+						<div class="card-body">
+							<div class="testmoney-img">
+								<center>
+									<img src="{% static 'img/bg.png' %}" class="round-img">
+								</center>
+							</div>
+							<div class="testmone-title">
+								<h6 class="text-center pt-3"><b>Kilian -Kisumu </b></h6>
+
+								<p class="text-center pt-4">Your guys you make my week so great
+								i thought it's joke but i received my money this night after investing for two months</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-xl-3 col-sm-12 col-xs-12">
+					<div class="card card-hover">
+						<div class="card-body">
+							<div class="testmoney-img">
+								<center><img src="{% static 'img/bg.png' %}" class="round-img"></center>
+							</div>
+							<div class="testmone-title">
+								<h6 class="text-center pt-3"><b>Kidiman_23 -Ubungo</b></h6>
+
+								<p class="text-center pt-4">Big up, mnafanya vixuri, jitahidini </p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-xl-3 col-sm-12 col-xs-12">
+					<div class="card card-hover">
+						<div class="card-body">
+							<div class="testmoney-img">
+								<center><img src="{% static 'img/bg.png' %}" class="round-img"></center>
+							</div>
+							<div class="testmone-title">
+								<h6 class="text-center pt-3"><b>Kizuka - UDOM</b></h6>
+
+								<p class="text-center pt-4">kama ni rate nawapa 9/10, nadhani maisha ya chuo yatakua rahisi sana </p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-xl-3 col-sm-12 col-xs-12">
+					<div class="card card-hover">
+						<div class="card-body">
+							<div class="testmoney-img">
+								<center><img src="{% static 'img/bg.png' %}" class="round-img"></center>
+							</div>
+							<div class="testmone-title">
+								<h6 class="text-center pt-3"><b>Salome Mchuta</b></h6>
+
+								<p class="text-center pt-4">Greetings from same kilimanjaro </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- footer -->
+	<footer class="footer mt-3">
+		<div class="bg-dark-blue">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4 col-xl-4 col-xs-12 col-sm-12">
+						<div class="about-us p-3">
+							<h6 class="text-light">About us</h6>
+						</div>
+					</div>
+					<div class="col-md-4 col-xl-4 col-xs-12 col-sm-12">
+						<div class="about-us p-3">
+							<h6 class="text-light">Contact us</h6>
+							<ul class="list-unstyled ml-4">
+								<li class="text-light">
+									<i class="fa fa-phone text-danger"></i>
+									0785674839
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4 col-xl-4 col-xs-12 col-sm-12">
+						<div class="about-us p-3">
+							<h6 class="text-light">Location us</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<div class="modal" id="investCalu">
+  	<div class="modal-dialog">
+    	<div class="modal-content">
+	      	<!-- Modal Header -->
+	      	<div class="modal-header">
+	        	<h4 class="modal-title">Invest Calculator</h4>
+	        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	</div>
+
+      		<!-- Modal body -->
+     		<div class="modal-body">
+       			<form v-on:submit.prevent>
+					<h5 class="text-center"><b>Tsh. [[total]]</b></h5>
+					<p class="text-center text-danger">[[error]]</p>
+					<div class="container-fluid">
+						<div class="d-flex">
+							<div>
+								<label>* Select Days</label>
+								<select v-model="days" class="form-balance">
+									{% for i in plan %}
+									<option>{{i.days}}</option>
+									{% endfor %}
+								</select>
+							</div>
+							<div>
+								<label>* Enter Amount</label>
+								<input type="" placeholder="Enter amount" v-model="amount" class="ml-2">
+							</div>
+							<div>								
+								<button class="btn btn-info btn-sm ml-2" style="margin-top: 2rem;" @click="calc">Calculate</button>
+							</div>
+						</div>
+					</div>
+				</form>
+    		</div>
+    		<!-- Modal footer -->
+    		<div class="modal-footer">
+        		<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+    		</div>
+   		 </div>
+  	</div>
+ </div>
+
+
+<script type="text/javascript">
+	var app = new Vue({
+	delimiters: ["[[", "]]"],
+		el: '#investCalu',
+		data: {
+		   amount: '',
+		   days: '',
+		   total : 0,
+		   error: ''
+		},
+
+		methods: {
+			calc () {
+				var new_total  = 2;
+
+				var get_day    = parseInt(this.days);
+				var get_amount = parseInt(this.amount);
+
+				if (get_amount >= 10000) {
+
+					if(get_day == 4) {
+						interest_amount = get_amount * 0.3;
+						new_total 		= interest_amount + get_amount;
+						this.total      = new_total 
+						this.error      = ''
+					}
+
+					else if(get_day == 8) {
+						interest_amount = get_amount * 0.6;
+						new_total       = interest_amount + get_amount;
+						this.total      = new_total 
+						this.error      = ''
+					}
+					else {
+						total = 0
+					}
+				}
+
+				else {
+					this.error = "Invalid amount required more than 10000";
+					this.total = 0
+				}				
+			}
+		}
+
+	})
+
+</script>
+
+<script>
+	Vue.use(loader)
+		new Vue({
+		el: '#app',
+	  	components:{
+	  		loader:loader
+		}
+	});
+</script>
+
+	<style type="text/css">
+		.form-balance {
+			width: 10rem;
+			height: 1.8rem;
+		}
+		.card-image {
+			width: 40%;	
+			margin: auto;
+		}
+		.bg-black {
+			background-color:black;
+		}
+		.bg-dark-blue {
+			background-color:#22293d;
+		}
+		.control-img {
+			width: 60%;
+		}
+
+		.control-img-logo {
+			width: 30%;
+		}
+		.round-img {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+		}
+
+		.testmoney-img{
+			margin-top: -4rem;
+		}
+
+		.card-hover{
+			transition: all ease 1s;
+		}
+
+		.card-hover:hover, .round-img:hover{
+			cursor: pointer;
+			border: 1px solid #22293d;
+		}
+		.form-control{
+			padding: 1.5rem;
+			border-top-style: none;
+			border-left-style: none;
+			border-right-style: none;
+		}
+
+		.form-control: focus{
+			background: transparent;
+		}
+
+	</style>
+
+	  <script src="{% static 'js/wow.min.js' %}"></script>
+	<script type="text/javascript">
+		new WOW().init()
+	</script>
+</body>
+</html>
